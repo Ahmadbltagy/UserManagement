@@ -1,0 +1,15 @@
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\bin\Debug\net6.0\UsersManagement.Application.deps.json
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\bin\Debug\net6.0\UsersManagement.Application.dll
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\bin\Debug\net6.0\UsersManagement.Application.pdb
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\UsersManagement.Application.csproj.AssemblyReference.cache
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\UsersManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\UsersManagement.Application.AssemblyInfoInputs.cache
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\UsersManagement.Application.AssemblyInfo.cs
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\UsersManagement.Application.csproj.CoreCompileInputs.cache
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\UsersManagement.Application.dll
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\refint\UsersManagement.Application.dll
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\UsersManagement.Application.pdb
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\ref\UsersManagement.Application.dll
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\bin\Debug\net6.0\UsersManagement.Domain.dll
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\bin\Debug\net6.0\UsersManagement.Domain.pdb
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.Application\obj\Debug\net6.0\UsersManagement.Application.csproj.CopyComplete

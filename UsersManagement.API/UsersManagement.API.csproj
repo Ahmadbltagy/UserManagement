@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Hangfire" Version="1.8.17" />
+        <PackageReference Include="Hangfire.AspNetCore" Version="1.8.17" />
+        <PackageReference Include="Hangfire.SqlServer" Version="1.8.17" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.36">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.36" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\UsersManagement.Infrastructure\UsersManagement.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
