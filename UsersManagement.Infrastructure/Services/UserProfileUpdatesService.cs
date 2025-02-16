@@ -23,7 +23,7 @@ public class UserProfileUpdatesService : IUserProfileUpdatesService
         _emailService = emailService;
     }
     
-    public async Task<PaginatedResponse<UserProfileUpdatesResponseDto>> GetUserProfileUpdates(int pageNumber, int pageSize)
+    public async Task<PaginatedResponse<UserProfilePendingUpdatesResponseDto>> GetUserProfileUpdates(int pageNumber, int pageSize)
     {
         var query = new GetAllPendingUserProfileUpdatesQuery(pageNumber, pageSize);
         
@@ -115,17 +115,17 @@ public class UserProfileUpdatesService : IUserProfileUpdatesService
         return result.Email;
     }
 
-    private async Task<bool> UpdateUserProfileTable(UserProfileUpdates userProfileUpdatesResult)
+    private async Task<bool> UpdateUserProfileTable(UserProfilePendingUpdates userProfilePendingUpdatesResult)
     {
            
-        var userProfileQuery = new GetUserProfileByUserIdQuery(userProfileUpdatesResult.UserId.ToString());
+        var userProfileQuery = new GetUserProfileByUserIdQuery(userProfilePendingUpdatesResult.UserId.ToString());
         var userProfileResult = await _mediator.Send(userProfileQuery);
 
         var updateUserProfileDto = new UpdateUserProfileDto
         {
-            FirstName = userProfileUpdatesResult.FirstName,
-            LastName = userProfileUpdatesResult.LastName,
-            DateOfBirth = userProfileUpdatesResult.DateOfBirth,
+            FirstName = userProfilePendingUpdatesResult.FirstName,
+            LastName = userProfilePendingUpdatesResult.LastName,
+            DateOfBirth = userProfilePendingUpdatesResult.DateOfBirth,
         };
 
         var updateUserProfile = new UpdateUserProfileCommand(updateUserProfileDto, userProfileResult);

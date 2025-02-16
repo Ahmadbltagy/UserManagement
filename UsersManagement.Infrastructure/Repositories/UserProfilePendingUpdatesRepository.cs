@@ -7,25 +7,25 @@ using UsersManagement.Persistence.DbContext;
 
 namespace UsersManagement.Infrastructure.Repositories;
 
-public class UserProfileUpdatesRepository : GenericRepository<UserProfileUpdates>, IUserProfileUpdatesRepository
+public class UserProfilePendingUpdatesRepository : GenericRepository<UserProfilePendingUpdates>, IUserProfilePendingUpdatesRepository
 {
 
-    public UserProfileUpdatesRepository(UserManagementDbContext userManagementDbContext) : base(userManagementDbContext)
+    public UserProfilePendingUpdatesRepository(UserManagementDbContext userManagementDbContext) : base(userManagementDbContext)
     {
         
     }
 
 
-    public async Task<(List<UserProfileUpdatesResponseDto>,int)> GetAllPendingUpdates(int pageNumber, int pageSize)
+    public async Task<(List<UserProfilePendingUpdatesResponseDto>,int)> GetAllPendingUpdates(int pageNumber, int pageSize)
     {
         int skipCounter = pageSize * (pageNumber - 1);
         
         var data =  await _context
-            .UserProfileUpdate
+            .UserProfilePendingUpdate
             .Skip(skipCounter)
             .Take(pageSize)
             .Where(p => !p.IsApproved)
-            .Select(p=>new UserProfileUpdatesResponseDto()
+            .Select(p=>new UserProfilePendingUpdatesResponseDto()
             {
                 RequestId = p.Id,
                 FirstName = p.FirstName,
@@ -36,7 +36,7 @@ public class UserProfileUpdatesRepository : GenericRepository<UserProfileUpdates
             })
             .ToListAsync();
         
-        var totalCount = await _context.UserProfileUpdate.CountAsync(p=>!p.IsApproved);
+        var totalCount = await _context.UserProfilePendingUpdate.CountAsync(p=>!p.IsApproved);
         
         return (data, totalCount);
 

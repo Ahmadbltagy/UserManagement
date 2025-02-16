@@ -5,11 +5,11 @@ namespace UsersManagement.Application.Commands;
 
 public class ApproveUserProfileUpdateRequestCommand : IRequest<bool>
 {
-    public ApproveUserProfileUpdateRequestCommand(UserProfileUpdates userProfileUpdates)
+    public ApproveUserProfileUpdateRequestCommand(UserProfilePendingUpdates userProfilePendingUpdates)
     {
-        UserProfileUpdates = userProfileUpdates;
+        UserProfilePendingUpdates = userProfilePendingUpdates;
     }
 
-    public UserProfileUpdates UserProfileUpdates { get; set; }    
+    public UserProfilePendingUpdates UserProfilePendingUpdates { get; set; }    
     
 }

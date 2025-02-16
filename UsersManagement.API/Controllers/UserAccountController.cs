@@ -9,7 +9,7 @@ namespace UsersManagement.API.Controllers;
 
 [ApiController]
 [Route("api/userAccount")]
-[Authorize]
+
 public class UserAccountController : ControllerBase
 {
     
@@ -78,7 +78,7 @@ public class UserAccountController : ControllerBase
         };
     }
 
-    [HttpPut]
+    [HttpPut("changePassword")]
     public async Task<IActionResult> UpdateUserAccountPassword(UpdateUserAccountPasswordDto createUserAccountDto)
     {
         var updatePassword = await _userAccountService.UpdatePassword(createUserAccountDto);

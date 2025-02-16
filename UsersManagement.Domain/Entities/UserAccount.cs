@@ -19,5 +19,5 @@ public class UserAccount
     public UserRole UserRole { get; set; }
     public UserProfile UserProfile { get; set; } 
     public ICollection<UserSession> UserSession { get; set; }
-    public ICollection<UserProfileUpdates> UserProfileUpdates { get; set;}
+    public ICollection<UserProfilePendingUpdates> UserProfileUpdates { get; set;}
 }

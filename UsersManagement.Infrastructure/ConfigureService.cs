@@ -37,7 +37,7 @@ public static class ConfigureService
     {
         services.AddScoped<ILoginService, LoginService>();
         services.AddScoped<IUserAccountService, UserAccountService>();
-        services.AddScoped<IUserProfileUpdatesService, UserProfileUpdatesService>();
+        services.AddScoped<IUserProfilePendingUpdatesRepository, UserProfilePendingUpdatesRepository>();
         services.AddScoped<IUserSessionService, UserSessionService>();
         services.AddScoped<IEmailService, EmailService>();
         services.AddScoped<IUserProfileService, UserProfileService>();
@@ -53,7 +53,7 @@ public static class ConfigureService
         services.AddScoped<IUserAccountRepository, UserAccountRepository>();
         services.AddScoped<IUserSessionRepository, UserSessionRepository>();
         services.AddScoped<IUserProfileRepository, UserProfileRepository>();
-        services.AddScoped<IUserProfileUpdatesRepository, UserProfileUpdatesRepository>();
+        services.AddScoped<UserProfilePendingUpdatesRepository, UserProfilePendingUpdatesRepository>();
         
         return services;
     }

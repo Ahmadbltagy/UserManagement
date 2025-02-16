@@ -72,7 +72,7 @@ namespace UsersManagement.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserProfileUpdate",
+                name: "UserProfilePendingUpdate",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -88,9 +88,9 @@ namespace UsersManagement.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserProfileUpdate", x => x.Id);
+                    table.PrimaryKey("PK_UserProfilePendingUpdate", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserProfileUpdate_UserAccount_UserAccountId",
+                        name: "FK_UserProfilePendingUpdate_UserAccount_UserAccountId",
                         column: x => x.UserAccountId,
                         principalTable: "UserAccount",
                         principalColumn: "Id",
@@ -140,12 +140,12 @@ namespace UsersManagement.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "UserAccount",
                 columns: new[] { "Id", "CreatedAt", "Email", "IsActive", "IsTempPassword", "LastLoginAt", "Password", "TempPassword", "UserId", "UserRoleId" },
-                values: new object[] { 1, new DateTime(2025, 2, 15, 23, 35, 34, 994, DateTimeKind.Local).AddTicks(9878), "superadmin@gmail.com", true, false, null, "$2a$11$lEbCVV77QIL6YYkUGmn3A.fOEkvy9nmnPcDJhKz9GzG4BvTPJdu5a", null, new Guid("fa3e6d61-7331-4c96-a472-5d0bccd29665"), 1 });
+                values: new object[] { 1, new DateTime(2025, 2, 16, 5, 56, 35, 501, DateTimeKind.Local).AddTicks(2832), "superadmin@gmail.com", true, false, null, "$2a$11$lEbCVV77QIL6YYkUGmn3A.fOEkvy9nmnPcDJhKz9GzG4BvTPJdu5a", null, new Guid("0d64115d-2b23-4b57-92aa-08d9d941d691"), 1 });
 
             migrationBuilder.InsertData(
                 table: "UserProfile",
                 columns: new[] { "Id", "DateOfBirth", "FirstName", "LastName", "UserAccountId", "UserId" },
-                values: new object[] { 1, new DateTime(1999, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), "Super", "Admin", 1, new Guid("fa3e6d61-7331-4c96-a472-5d0bccd29665") });
+                values: new object[] { 1, new DateTime(1999, 2, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), "Super", "Admin", 1, new Guid("0d64115d-2b23-4b57-92aa-08d9d941d691") });
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserAccount_UserRoleId",
@@ -159,8 +159,8 @@ namespace UsersManagement.Persistence.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserProfileUpdate_UserAccountId",
-                table: "UserProfileUpdate",
+                name: "IX_UserProfilePendingUpdate_UserAccountId",
+                table: "UserProfilePendingUpdate",
                 column: "UserAccountId");
 
             migrationBuilder.CreateIndex(
@@ -175,7 +175,7 @@ namespace UsersManagement.Persistence.Migrations
                 name: "UserProfile");
 
             migrationBuilder.DropTable(
-                name: "UserProfileUpdate");
+                name: "UserProfilePendingUpdate");
 
             migrationBuilder.DropTable(
                 name: "UserSession");

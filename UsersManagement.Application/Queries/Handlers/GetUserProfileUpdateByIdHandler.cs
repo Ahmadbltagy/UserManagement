@@ -4,17 +4,17 @@ using UsersManagement.Domain.Entities;
 
 namespace UsersManagement.Application.Queries.Handlers;
 
-public class GetUserProfileUpdateByIdHandler : IRequestHandler<GetUserProfileUpdateByIdQuery, UserProfileUpdates?>
+public class GetUserProfileUpdateByIdHandler : IRequestHandler<GetUserProfileUpdateByIdQuery, UserProfilePendingUpdates?>
 {
-    private readonly IUserProfileUpdatesRepository _userProfileUpdatesRepository;
+    private readonly IUserProfilePendingUpdatesRepository _iUserProfilePendingUpdatesRepository;
 
-    public GetUserProfileUpdateByIdHandler(IUserProfileUpdatesRepository userProfileUpdatesRepository)
+    public GetUserProfileUpdateByIdHandler(IUserProfilePendingUpdatesRepository iUserProfilePendingUpdatesRepository)
     {
-        _userProfileUpdatesRepository = userProfileUpdatesRepository;
+        _iUserProfilePendingUpdatesRepository = iUserProfilePendingUpdatesRepository;
     }
 
-    public async Task<UserProfileUpdates?> Handle(GetUserProfileUpdateByIdQuery request, CancellationToken cancellationToken)
+    public async Task<UserProfilePendingUpdates?> Handle(GetUserProfileUpdateByIdQuery request, CancellationToken cancellationToken)
     {
-        return await _userProfileUpdatesRepository.GetByIdAsync(request.RequestId);
+        return await _iUserProfilePendingUpdatesRepository.GetByIdAsync(request.RequestId);
     }
 }

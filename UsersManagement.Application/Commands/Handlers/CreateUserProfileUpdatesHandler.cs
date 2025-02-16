@@ -5,16 +5,16 @@ namespace UsersManagement.Application.Commands.Handlers;
 
 public class CreateUserProfileUpdatesHandler : IRequestHandler<CreateUserProfileUpdatesCommand, bool>
 {
-    private IUserProfileUpdatesRepository _userProfileUpdatesRepository;
+    private IUserProfilePendingUpdatesRepository _iUserProfilePendingUpdatesRepository;
     
-    public CreateUserProfileUpdatesHandler(IUserProfileUpdatesRepository userProfileUpdatesRepository)
+    public CreateUserProfileUpdatesHandler(IUserProfilePendingUpdatesRepository iUserProfilePendingUpdatesRepository)
     {
-        _userProfileUpdatesRepository = userProfileUpdatesRepository;
+        _iUserProfilePendingUpdatesRepository = iUserProfilePendingUpdatesRepository;
     }
     
     public async Task<bool> Handle(CreateUserProfileUpdatesCommand request, CancellationToken cancellationToken)
     {
-        await _userProfileUpdatesRepository.AddAsync(request.UserProfileUpdates);
-        return await _userProfileUpdatesRepository.SaveChanagesAsync();
+        await _iUserProfilePendingUpdatesRepository.AddAsync(request.UserProfilePendingUpdates);
+        return await _iUserProfilePendingUpdatesRepository.SaveChanagesAsync();
     }
 }

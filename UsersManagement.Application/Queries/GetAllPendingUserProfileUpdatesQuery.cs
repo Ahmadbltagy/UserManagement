@@ -4,7 +4,7 @@ using UsersManagement.Application.DTOs;
 
 namespace UsersManagement.Application.Queries;
 
-public class GetAllPendingUserProfileUpdatesQuery : IRequest<PaginatedResponse<UserProfileUpdatesResponseDto>>
+public class GetAllPendingUserProfileUpdatesQuery : IRequest<PaginatedResponse<UserProfilePendingUpdatesResponseDto>>
 {
     public int PageNumber { get; }
     public int PageSize { get; }

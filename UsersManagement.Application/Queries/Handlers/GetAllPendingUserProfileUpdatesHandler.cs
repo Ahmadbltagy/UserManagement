@@ -5,19 +5,19 @@ using UsersManagement.Application.Interfaces.Repositories;
 
 namespace UsersManagement.Application.Queries.Handlers;
 
-public class GetAllPendingUserProfileUpdatesHandler : IRequestHandler<GetAllPendingUserProfileUpdatesQuery, PaginatedResponse<UserProfileUpdatesResponseDto>>
+public class GetAllPendingUserProfileUpdatesHandler : IRequestHandler<GetAllPendingUserProfileUpdatesQuery, PaginatedResponse<UserProfilePendingUpdatesResponseDto>>
 {
-    private readonly IUserProfileUpdatesRepository _userProfileUpdatesRepository;
+    private readonly IUserProfilePendingUpdatesRepository _iUserProfilePendingUpdatesRepository;
     
-    public GetAllPendingUserProfileUpdatesHandler(IUserProfileUpdatesRepository userProfileUpdatesRepository)
+    public GetAllPendingUserProfileUpdatesHandler(IUserProfilePendingUpdatesRepository iUserProfilePendingUpdatesRepository)
     {
-        _userProfileUpdatesRepository = userProfileUpdatesRepository;
+        _iUserProfilePendingUpdatesRepository = iUserProfilePendingUpdatesRepository;
     }
-    public async Task<PaginatedResponse<UserProfileUpdatesResponseDto>> Handle(GetAllPendingUserProfileUpdatesQuery request, CancellationToken cancellationToken)
+    public async Task<PaginatedResponse<UserProfilePendingUpdatesResponseDto>> Handle(GetAllPendingUserProfileUpdatesQuery request, CancellationToken cancellationToken)
     {
-        var (data,totalCount) = await _userProfileUpdatesRepository.GetAllPendingUpdates(request.PageNumber, request.PageSize);
+        var (data,totalCount) = await _iUserProfilePendingUpdatesRepository.GetAllPendingUpdates(request.PageNumber, request.PageSize);
         
-        var userProfileDto  = data.Select(p=>new UserProfileUpdatesResponseDto()
+        var userProfileDto  = data.Select(p=>new UserProfilePendingUpdatesResponseDto()
         {
             RequestId = p.RequestId,
             FirstName = p.FirstName,
@@ -29,7 +29,7 @@ public class GetAllPendingUserProfileUpdatesHandler : IRequestHandler<GetAllPend
    
 
         
-        return new PaginatedResponse<UserProfileUpdatesResponseDto>(userProfileDto, totalCount, request.PageNumber, request.PageSize);
+        return new PaginatedResponse<UserProfilePendingUpdatesResponseDto>(userProfileDto, totalCount, request.PageNumber, request.PageSize);
         
     }
     

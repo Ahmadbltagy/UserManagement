@@ -81,7 +81,6 @@ D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\Micr
 D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\Humanizer.dll
 D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\obj\Debug\net6.0\UsersManagement.API.csproj.CopyComplete
 D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\Hangfire.AspNetCore.dll
 D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\Hangfire.Core.dll
 D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\Hangfire.NetCore.dll
@@ -101,3 +100,4 @@ D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\sv\H
 D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\tr-TR\Hangfire.Core.resources.dll
 D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\zh-TW\Hangfire.Core.resources.dll
 D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\bin\Debug\net6.0\zh\Hangfire.Core.resources.dll
+D:\Projects\dotnet\UsersManagement.API\UsersManagement.API\obj\Debug\net6.0\UsersManagement.API.csproj.CopyComplete

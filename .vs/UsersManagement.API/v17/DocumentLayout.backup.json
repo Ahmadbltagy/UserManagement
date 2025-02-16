@@ -1,28 +1,15 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\dotnet\\UsersManagement.API\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\dotnet\\UsersManagement.API\\UsersManagement.Persistence\\Migrations\\20250215213535_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UsersManagement.Persistence\\Migrations\\20250215213535_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C0D13FB-2F98-4FD8-A1F5-44951220F7EA}|UsersManagement.API\\UsersManagement.API.csproj|d:\\projects\\dotnet\\usersmanagement.api\\usersmanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C0D13FB-2F98-4FD8-A1F5-44951220F7EA}|UsersManagement.API\\UsersManagement.API.csproj|solutionrelative:usersmanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C0D13FB-2F98-4FD8-A1F5-44951220F7EA}|UsersManagement.API\\UsersManagement.API.csproj|d:\\projects\\dotnet\\usersmanagement.api\\usersmanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0C0D13FB-2F98-4FD8-A1F5-44951220F7EA}|UsersManagement.API\\UsersManagement.API.csproj|solutionrelative:usersmanagement.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 170,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,44 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:218510917:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250215213535_InitialCreate.cs",
-              "DocumentMoniker": "D:\\Projects\\dotnet\\UsersManagement.API\\UsersManagement.Persistence\\Migrations\\20250215213535_InitialCreate.cs",
-              "RelativeDocumentMoniker": "UsersManagement.Persistence\\Migrations\\20250215213535_InitialCreate.cs",
-              "ToolTip": "D:\\Projects\\dotnet\\UsersManagement.API\\UsersManagement.Persistence\\Migrations\\20250215213535_InitialCreate.cs",
-              "RelativeToolTip": "UsersManagement.Persistence\\Migrations\\20250215213535_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T21:35:35.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\dotnet\\UsersManagement.API\\UsersManagement.API\\Program.cs",
-              "RelativeDocumentMoniker": "UsersManagement.API\\Program.cs",
-              "ToolTip": "D:\\Projects\\dotnet\\UsersManagement.API\\UsersManagement.API\\Program.cs",
-              "RelativeToolTip": "UsersManagement.API\\Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAuwAwAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T13:42:05.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Projects\\dotnet\\UsersManagement.API\\UsersManagement.API\\appsettings.json",
-              "RelativeDocumentMoniker": "UsersManagement.API\\appsettings.json",
-              "ToolTip": "D:\\Projects\\dotnet\\UsersManagement.API\\UsersManagement.API\\appsettings.json",
-              "RelativeToolTip": "UsersManagement.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-13T14:11:42.204Z"
             }
           ]
         },

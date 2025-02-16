@@ -1,6 +1,6 @@
 namespace UsersManagement.Application.DTOs;
 
-public class UserProfileUpdatesResponseDto
+public class UserProfilePendingUpdatesResponseDto
 {
     public int RequestId { get; set; }
     public Guid UserId { get; set; }

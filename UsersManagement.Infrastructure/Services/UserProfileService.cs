@@ -131,7 +131,7 @@ public class UserProfileService : IUserProfileService
 
     private async Task<UserProfileResponseDto> CreatePendingEmployeeProfileUpdate(UpdateUserProfileDto userProfileDto, UserProfile userProfile)
     {
-        var userProfileUpdates = new UserProfileUpdates()
+        var userProfileUpdates = new UserProfilePendingUpdates()
         {
             FirstName = userProfileDto.FirstName ?? userProfile.FirstName,
             LastName = userProfileDto.LastName ?? userProfile.LastName,

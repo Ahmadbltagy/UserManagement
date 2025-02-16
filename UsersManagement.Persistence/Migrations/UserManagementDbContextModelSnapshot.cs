@@ -68,12 +68,12 @@ namespace UsersManagement.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2025, 2, 15, 23, 35, 34, 994, DateTimeKind.Local).AddTicks(9878),
+                            CreatedAt = new DateTime(2025, 2, 16, 5, 56, 35, 501, DateTimeKind.Local).AddTicks(2832),
                             Email = "superadmin@gmail.com",
                             IsActive = true,
                             IsTempPassword = false,
                             Password = "$2a$11$lEbCVV77QIL6YYkUGmn3A.fOEkvy9nmnPcDJhKz9GzG4BvTPJdu5a",
-                            UserId = new Guid("fa3e6d61-7331-4c96-a472-5d0bccd29665"),
+                            UserId = new Guid("0d64115d-2b23-4b57-92aa-08d9d941d691"),
                             UserRoleId = 1
                         });
                 });
@@ -118,11 +118,11 @@ namespace UsersManagement.Persistence.Migrations
                             FirstName = "Super",
                             LastName = "Admin",
                             UserAccountId = 1,
-                            UserId = new Guid("fa3e6d61-7331-4c96-a472-5d0bccd29665")
+                            UserId = new Guid("0d64115d-2b23-4b57-92aa-08d9d941d691")
                         });
                 });
 
-            modelBuilder.Entity("UsersManagement.Domain.Entities.UserProfileUpdates", b =>
+            modelBuilder.Entity("UsersManagement.Domain.Entities.UserProfilePendingUpdates", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -158,7 +158,7 @@ namespace UsersManagement.Persistence.Migrations
 
                     b.HasIndex("UserAccountId");
 
-                    b.ToTable("UserProfileUpdate");
+                    b.ToTable("UserProfilePendingUpdate");
                 });
 
             modelBuilder.Entity("UsersManagement.Domain.Entities.UserRole", b =>
@@ -252,7 +252,7 @@ namespace UsersManagement.Persistence.Migrations
                     b.Navigation("UserAccount");
                 });
 
-            modelBuilder.Entity("UsersManagement.Domain.Entities.UserProfileUpdates", b =>
+            modelBuilder.Entity("UsersManagement.Domain.Entities.UserProfilePendingUpdates", b =>
                 {
                     b.HasOne("UsersManagement.Domain.Entities.UserAccount", "UserAccount")
                         .WithMany("UserProfileUpdates")

@@ -9,7 +9,7 @@ public class UserManagementDbContext : DbContext
     public DbSet<UserAccount> UserAccount { get; set; }
     public DbSet<UserRole> UserRole { get; set; }
     public DbSet<UserProfile> UserProfile { get; set; }
-    public DbSet<UserProfileUpdates> UserProfileUpdate { get; set; }
+    public DbSet<UserProfilePendingUpdates> UserProfilePendingUpdate { get; set; }
     public DbSet<UserSession> UserSession { get; set; }
 
    
@@ -50,7 +50,7 @@ public class UserManagementDbContext : DbContext
         );
  
         
-        modelBuilder.Entity<UserProfileUpdates>()
+        modelBuilder.Entity<UserProfilePendingUpdates>()
                     .Property(u=>u.DateOfBirth)
                     .HasColumnType("date");
         

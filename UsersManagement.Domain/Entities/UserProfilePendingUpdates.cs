@@ -1,6 +1,6 @@
 namespace UsersManagement.Domain.Entities;
 
-public class UserProfileUpdates
+public class UserProfilePendingUpdates
 {
     public int Id { get; set; }
     public Guid UserId { get; set; }

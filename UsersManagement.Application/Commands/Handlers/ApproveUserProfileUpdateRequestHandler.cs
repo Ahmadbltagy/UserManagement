@@ -5,19 +5,19 @@ namespace UsersManagement.Application.Commands.Handlers;
 
 public class ApproveUserProfileUpdateRequestHandler : IRequestHandler<ApproveUserProfileUpdateRequestCommand, bool>
 {
-    private readonly IUserProfileUpdatesRepository _userProfileUpdatesRepository;
+    private readonly IUserProfilePendingUpdatesRepository _iUserProfilePendingUpdatesRepository;
     
 
-    public ApproveUserProfileUpdateRequestHandler(IUserProfileUpdatesRepository userProfileUpdatesRepository)
+    public ApproveUserProfileUpdateRequestHandler(IUserProfilePendingUpdatesRepository iUserProfilePendingUpdatesRepository)
     {
-        _userProfileUpdatesRepository = userProfileUpdatesRepository;
+        _iUserProfilePendingUpdatesRepository = iUserProfilePendingUpdatesRepository;
     }
 
     public Task<bool> Handle(ApproveUserProfileUpdateRequestCommand request, CancellationToken cancellationToken)
     {
-       request.UserProfileUpdates.IsApproved = true;
-       request.UserProfileUpdates.ApprovalDate = DateTime.Now;
-       _userProfileUpdatesRepository.Update(request.UserProfileUpdates);
+       request.UserProfilePendingUpdates.IsApproved = true;
+       request.UserProfilePendingUpdates.ApprovalDate = DateTime.Now;
+       _iUserProfilePendingUpdatesRepository.Update(request.UserProfilePendingUpdates);
        
        return Task.FromResult(true);
     }

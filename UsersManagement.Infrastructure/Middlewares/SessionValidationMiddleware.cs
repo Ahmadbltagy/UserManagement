@@ -21,7 +21,7 @@ public class SessionValidationMiddleware
     public async Task Invoke(HttpContext context, UserManagementDbContext dbContext)
     {
         var path = context.Request.Path.Value?.ToLower();
-        if (path == "/api/login")
+        if (path == "/api/login" || path == "/api/useraccount/changepassword")
         {
             await _next(context);
             return;
