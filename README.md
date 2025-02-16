@@ -71,7 +71,7 @@ UsersManagement.API
 | HTTP Method | Endpoint                     | Description |
 |------------|------------------------------|-------------|
 | POST       | `/api/userAccount`            | Create a new user account |
-| PUT        | `/api/userAccount`            | Update user account details |
+| PUT        | `/api/userAccount/changePassword`            | Update user account password |
 | GET        | `/api/userAccount/AllActive`  | Get all active user accounts |
 | GET        | `/api/userAccount/AllInactive` | Get all inactive user accounts |
 | PUT        | `/api/userAccount/Reactivate` | Reactivate a suspended account |
